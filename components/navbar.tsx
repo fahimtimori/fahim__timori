@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useEffect, useMemo, useState } from "react"
 
 import { personalInfo, socialLinks } from "@/lib/site-data"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -52,6 +53,7 @@ export function Navbar() {
               </li>
             ))}
           </ul>
+          <ThemeToggle />
         </nav>
       </div>
     </header>

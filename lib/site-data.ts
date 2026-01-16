@@ -42,7 +42,7 @@ export const personalInfo = {
      {
       label: "Experience",
       value: "3 Years",
-      helper: "CMS and frontend",
+      helper: "CMS-driven frontends and performance optimization",
     },
   ] satisfies MetricCard[],
 } as const

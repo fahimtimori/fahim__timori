@@ -27,8 +27,8 @@ export function formatDateShort(dateStr?: string) {
   if (Number.isNaN(d.getTime())) return dateStr
 
   const month = new Intl.DateTimeFormat("en", { month: "short" }).format(d)
-  const day = String(d.getDate()).padStart(2, "0")
+  const day = d.getDate()
   const year = d.getFullYear()
 
-  return `${month}-${day},${year}`
+  return `${month} ${day}, ${year}`
 }

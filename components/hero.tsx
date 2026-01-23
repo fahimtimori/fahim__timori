@@ -118,6 +118,13 @@ export function Hero() {
                       <span className="mt-1 block text-[11px] uppercase tracking-[0.24em] text-foreground/50">
                         {site.url.replace(/^https?:\/\//, "")}
                       </span>
+                      {(site.startDate || site.endDate) && (
+                        <span className="mt-1 block text-[11px] text-foreground/60">
+                          {site.startDate ? site.startDate : ""}
+                          {site.startDate && site.endDate ? " – " : ""}
+                          {site.endDate ? site.endDate : ""}
+                        </span>
+                      )}
                     </div>
                     <span className="text-sm font-semibold text-foreground/60 transition group-hover:text-foreground">
                       Visit

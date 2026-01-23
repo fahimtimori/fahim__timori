@@ -25,6 +25,8 @@ export default function Home() {
               {
                 title: "Shopify Web Developer",
                 company: "ValueTools",
+                startDate: "2025-12-07",
+                endDate: "Present",
                 website: "https://valuetools.co",
                 email: "info@valuetools.co",
                 description: [
@@ -36,6 +38,8 @@ export default function Home() {
               {
                 title: "WordPress Developer & SEO Specialist",
                 company: "Faribanawa",
+                startDate: "2025-11-10",
+                endDate: "2026-01-03",
                 website: "https://faribanawa.com",
                 email: "",
                 description: [
@@ -47,6 +51,8 @@ export default function Home() {
               {
                 title: "WordPress Developer",
                 company: "Manzoorify",
+                startDate: "2022-01-01",
+                endDate: "Present",
                 website: "https://www.manzoorify.com",
                 email: "fahimtimori110@gmail.com",
                 description: [
@@ -58,6 +64,8 @@ export default function Home() {
               {
                 title: "Shopify Web Developer",
                 company: "Supplement Corner",
+                startDate: "2025-07-01",
+                endDate: "Present",
                 website: "https://supplementcorner.com",
                 email: "supplementcorner6@gmail.com",
                 description: [
@@ -69,6 +77,8 @@ export default function Home() {
               {
                 title: "Shopify SEO & Content Specialist",
                 company: "CalVitamin",
+                startDate: "2025-04-01",
+                endDate: "Present",
                 website: "https://calvitamin.com",
                 email: "info@calvitamin.com",
                 description: [
@@ -80,6 +90,8 @@ export default function Home() {
               {
                 title: "Magento SEO & Content Specialist",
                 company: "Supplemynts",
+                startDate: "2024-09-01",
+                endDate: "2025-03-31",
                 website: "https://supplemynts.com",
                 email: "info@supplemynts.com",
                 description: [
@@ -91,6 +103,8 @@ export default function Home() {
               {
                 title: "WordPress Website Developer & SEO Manager",
                 company: "Aria Apollo",
+                startDate: "2024-01-01",
+                endDate: "Present",
                 website: "https://aah.af",
                 email: "",
                 description: [
@@ -103,6 +117,13 @@ export default function Home() {
               <div key={idx} className="border-l-2 border-primary pl-6">
                 <h3 className="text-xl font-semibold text-primary">{job.title}</h3>
                 <p className="text-lg font-medium text-foreground mb-2">{job.company}</p>
+                { (job.startDate || job.endDate) && (
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {job.startDate ? job.startDate : ""}
+                    {job.startDate && job.endDate ? " – " : ""}
+                    {job.endDate ? job.endDate : ""}
+                  </p>
+                )}
                 <div className="flex flex-wrap gap-3 mb-4 text-sm text-muted-foreground">
                   {job.website && (
                     <a

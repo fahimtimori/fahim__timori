@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react"
 import { Hero } from "@/components/hero"
 import { Navbar } from "@/components/navbar"
+import { formatDateShort } from "@/lib/utils"
 
 export const metadata = {
   title: "Fahim Timori - Web Developer & SEO Specialist",
@@ -119,9 +120,9 @@ export default function Home() {
                 <p className="text-lg font-medium text-foreground mb-2">{job.company}</p>
                 { (job.startDate || job.endDate) && (
                   <p className="text-sm text-muted-foreground mb-2">
-                    {job.startDate ? job.startDate : ""}
+                    {job.startDate ? formatDateShort(job.startDate) : ""}
                     {job.startDate && job.endDate ? " – " : ""}
-                    {job.endDate ? job.endDate : ""}
+                    {job.endDate ? formatDateShort(job.endDate) : ""}
                   </p>
                 )}
                 <div className="flex flex-wrap gap-3 mb-4 text-sm text-muted-foreground">

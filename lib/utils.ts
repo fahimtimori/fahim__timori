@@ -18,3 +18,17 @@ export function getAge(dob: string | Date) {
 
   return Math.max(0, years)
 }
+
+export function formatDateShort(dateStr?: string) {
+  if (!dateStr) return ""
+  if (dateStr.toLowerCase?.() === "present") return "Present"
+
+  const d = new Date(dateStr)
+  if (Number.isNaN(d.getTime())) return dateStr
+
+  const month = new Intl.DateTimeFormat("en", { month: "short" }).format(d)
+  const day = String(d.getDate()).padStart(2, "0")
+  const year = d.getFullYear()
+
+  return `${month}-${day},${year}`
+}

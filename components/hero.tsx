@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import { getAge } from "@/lib/utils"
+import { getAge, formatDateShort } from "@/lib/utils"
 import { personalInfo, productionSites } from "@/lib/site-data"
 
 export function Hero() {
@@ -120,9 +120,9 @@ export function Hero() {
                       </span>
                       {(site.startDate || site.endDate) && (
                         <span className="mt-1 block text-[11px] text-foreground/60">
-                          {site.startDate ? site.startDate : ""}
+                          {site.startDate ? formatDateShort(site.startDate) : ""}
                           {site.startDate && site.endDate ? " – " : ""}
-                          {site.endDate ? site.endDate : ""}
+                          {site.endDate ? formatDateShort(site.endDate) : ""}
                         </span>
                       )}
                     </div>
